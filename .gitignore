@@ -5,5 +5,11 @@
 *.rar
 *.pdf
 Unit-1/PracticalAssignment1/Daw-Server/
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.qcow2
+*.ova
+*.iso
 *.gif
-
