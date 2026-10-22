@@ -61,8 +61,8 @@ sudo systemctl status apache2
 #To reload the service
 sudo systemctl reload apache2
 ```
- Por un lado __systemctl reload__ carga la nueva configuración del servicio, pero sin interrumpir peticiones que estuviesen usando la configuración antigua.
-Por otro lado __systemctl start__ inicia el servicio desde 0, dandole igual las antiguas conexiones/peticiones en curso que hubiese antes.
+ First, __systemctl reload__ loads the new service configuration without interrupting previous request running on the old configuration.
+On the other hand __systemctl start__ reloads the service from nothing, without caring about request that were running on the old configuration.
 
 ## 7. Apache port
 Now I am going to check that the port from our server has the "LISTEN" status
