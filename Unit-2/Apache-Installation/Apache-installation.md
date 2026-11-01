@@ -36,7 +36,7 @@ We check the status of our apache service
 sudo systemctl status apache2
 ```
 You should see this "active(running)":
-![Apache status](/img/apacheStatus.png)
+![Apache status](img/apacheStatus.png)
 
 That means that the service is operative and functioning correctly.
 
@@ -70,7 +70,7 @@ Now I am going to check that the port from our server has the "LISTEN" status
 sudo netstat -tulpn
 ```
 This is what you should get:
-![Apache port](/img/apachePort.png)
+![Apache port](img/apachePort.png)
 
 If you look closely, you will see the apache service.
 
