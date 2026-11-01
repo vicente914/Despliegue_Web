@@ -8,7 +8,7 @@ First, we are gonna find the "__access.log__" file and list its content. It is l
 #To list its content
 sudo cat /var/log/apache2/access.log 
 ```
-[access.log](img/accessLog.png)
+![access.log](img/accessLog.png)
 
 ## 2.- Test it
 Now, we are gonna open the index.html of the apache server on our host machine, on the browser, we search up for the IP of the server, if we need to check the IP because we are not sure, run this command
@@ -16,7 +16,7 @@ Now, we are gonna open the index.html of the apache server on our host machine, 
 # Run this command and search for the enp0s3 ip
 ip a
 ```
-[index.html](img/index.png)
+![index.html](img/index.png)
 
 If everything went well, if we check again the content of the access.log file, we should see new lines on its content.
 ```bash
@@ -24,7 +24,7 @@ If everything went well, if we check again the content of the access.log file, w
 sudo cat /var/log/apache2/access.log
 ```
 
-[access.log second view](img/accessLog2.png)
+![access.log second view](img/accessLog2.png)
 
 As we can see, there are new lines because we visited with our host machine the site.
 Among those lines, we can identify:
@@ -42,7 +42,8 @@ To continue with this documentation, now we are going to trigger a 404 error and
 #Trigger error 404
 curl http://localhost/not-exist.html
 ```
-[Triggering error 404](img/trigger404.png)
+![Triggering error 404](img/trigger404.png)
  
  When we check the access.log file we should see a new line like this one:
- [access.log third view](img/accessLog3.png)
+ ![access.log third view](img/accessLog3.png)
+
