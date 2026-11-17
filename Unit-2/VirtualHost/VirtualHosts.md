@@ -48,8 +48,12 @@ sudo nano /etc/apache2/sites-available/site1.local.conf
 Once it is created and you are in, we will write this
 ```apache
 <VirtualHost *:80>
-ServerName site1.local
-DocumentRoot /var/www/site1.local/public_html
+	ServerName site1.local
+	DocumentRoot /var/www/site1.local/public_html
+
+	<Directory /var/www/site1.local/public_html>
+		Require all granted
+	</Directory>
 </VirtualHost>
 ```
 
@@ -63,8 +67,12 @@ sudo nano /etc/apache2/sites-available/site2.local.conf
 Once it is created and you are in, we will write this
 ```apache
 <VirtualHost *:80>
-ServerName site2.local
-DocumentRoot /var/www/site2.local/public_html
+	ServerName site2.local
+	DocumentRoot /var/www/site2.local/public_html
+
+	<Directory /var/www/site1.local/public_html>
+		Require all granted
+	</Directory>
 </VirtualHost>
 ```
 
